@@ -1,0 +1,23 @@
+while True:
+    ask = input(
+        'What operation would you like to do(Addition,Subtraction,Multiplication,Division or Exit): ').lower()
+    if ask == 'exit':
+        print('Thank you for using the calculator')
+        break
+
+    num1 = int(input('Enter first number: '))
+    num2 = int(input('Enter second number: '))
+    addition = num1 + num2
+    subtract = num1 - num2
+    product = num1 * num2
+    division = num1/num2 if num2 != 0 else 'infinity,undefined division by 0'
+    if ask in ['addition', 'add']:
+        print('The sum is', addition)
+    elif ask in ['subtraction', 'subtract']:
+        print('The difference is', subtract)
+    elif ask in ['product', 'multiply', 'Multiplication']:
+        print('The product is', product)
+    elif ask in ['division', 'divide']:
+        print('The quotient is', division)
+    else:
+        print('Sryy our latest version is not allowed with such calcualtions!!!')
